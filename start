@@ -1,0 +1,34 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.Locale;
+
+// The main method must be in a class named "Main".
+class Main {
+    public static void main(String[] args) throws IOException {
+
+// Garante que o Scanner leia pontos em vez de vírgulas
+        Locale.setDefault(Locale.US);
+        Scanner input = new Scanner(System.in);
+
+// 1. recebe 4 int
+        int A = input.nextInt();  
+        int B = input.nextInt(); 
+        int C = input.nextInt(); 
+        int D = input.nextInt(); 
+        
+        // 2. Uso correto dos operadores de comparação e colchetes no texto
+        if (B > C && D > A && (C + D) > (A + B) && C > 0 && D > 0 && A % 2 == 0) {
+            System.out.println( "Valores aceitos" );
+        } else  { 
+            System.out.println( "Valores nao aceitos" );
+        }
+
+        input.close();
+
+    }
+}
+
+
+//1-ler 4 int (ABCD), 
+//2-se B > C && D > A && C + D > A + B && C + D = >0 && A % 2 == 0
+//3-saida, mensagem (valores não aceitos) e (valores aceitos)
